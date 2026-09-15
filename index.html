@@ -815,11 +815,10 @@
     <div class="modal-content">
         <span class="close-modal" onclick="closeShop()">X</span>
         <h2 class="shop-header">🏪 SHOP SECRET 🏪</h2>
-        <div class="shop-balance">Inimi: <span id="shopHeartsDisplay" style="color:#ff3377">0</span> ❤️</div>
         
         <div class="shop-item" onclick="buyCompliment()">
-            <div style="font-size: 0.8rem; margin-bottom: 10px; color:#fff;">Cumpără un compliment</div>
-            <div style="font-size: 0.6rem; color:#ffd0e8;">Cost: 0 ❤️ — GRATUIT</div>
+            <div style="font-size: 0.8rem; margin-bottom: 10px; color:#fff;">Primește un compliment</div>
+            <div style="font-size: 0.6rem; color:#ffd0e8;">GRATUIT ❤️</div>
         </div>
         
         <p id="complimentText" style="margin-top: 30px; font-size: 0.8rem; line-height: 1.6; color: #28a745; min-height: 50px; font-family: 'VT323', monospace; position:relative; z-index:15;"></p>
@@ -2144,7 +2143,6 @@
     function closeShop() { document.getElementById('shopModal').classList.add('hidden'); document.getElementById('complimentText').textContent = ""; }
     
     function buyCompliment() {
-        // Compliments are completely free — no hearts are required or spent.
         const text = shopCompliments[Math.floor(Math.random() * shopCompliments.length)];
         showComplimentPopup(text);
     }
